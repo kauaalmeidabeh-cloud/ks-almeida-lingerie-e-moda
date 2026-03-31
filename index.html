@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KS Lingerie e Moda</title>
+
+<style>
+    .banner h1{
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.subtitulo{
+    font-size: 22px;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    opacity: 0.95;
+}
+
+/* ===== FUNDO ELEGANTE ===== */
+body{
+margin:0;
+padding-top:180px;
+font-family: Arial, sans-serif;
+background-color:#0b0b0b;
+color:white;
+}
+
+
+
+
+/* ===== MENU PROFISSIONAL ===== */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 50px;
+background:#000;
+box-shadow:0px 5px 20px rgba(0,0,0,0.5);
+
+position:fixed;
+top:0;
+}
+
+
+.logo{
+    width:90px;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#ff1a75;
+}
+
+header h1{
+    margin: 0;
+    font-size: 38px;
+    color: #ff2f92;
+    letter-spacing: 1px;
+}
+
+nav{
+    margin-top: 10px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #ff2f92;
+}
+
+/* ===== FRASE DA LOJA ===== */
+.frase{
+    text-align: center;
+    margin-top: 35px;
+    color: #bbbbbb;
+}
+
+/* ===== ÁREA DOS PRODUTOS ===== */
+.produtos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 40px;
+}
+
+/* ===== CAIXA DO PRODUTO ===== */
+.produto{
+    min-width: 260px;
+    background: white;
+    color: black;
+    padding: 18px;
+    border-radius: 20px;
+    text-align: center;
+    scroll-snap-align: start;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.produto:hover{
+    transform: translateY(-6px) scale(1.02);
+}
+
+/* ===== IMAGEM ===== */
+.produto img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ===== CARROSSEL DE PRODUTOS ===== */
+
+.carrossel{
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+/* esconder barra de rolagem */
+.carrossel::-webkit-scrollbar{
+    display: none;
+}
+
+.produto{
+    min-width: 180px;
+    scroll-snap-align: start;
+}
+
+/* ===== NOME DO PRODUTO ===== */
+.produto h3{
+    margin-top: 15px;
+}
+
+/* ===== PREÇO ===== */
+.preco{
+    font-size: 22px;
+    color: #ff2f92;
+    font-weight: bold;
+}
+
+/* ===== BOTÃO PROFISSIONAL ===== */
+
+.botao{
+    display: inline-block;
+    margin-top: 14px;
+    padding: 12px 26px;
+    background: linear-gradient(45deg, #ff4da6, #ff1a75);
+    color: white;
+    font-weight: 600;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.botao:hover{
+    transform: scale(1.07);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.25);
+}
+
+.botao:active{
+    transform: scale(0.95);
+}
+
+.botao:hover{
+    transform: scale(1.07);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.4);
+}
+ .produtos{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+/* ===== CAIXA DO PRODUTO COMPLETA (PROFISSIONAL HARD) ===== */
+
+.produto{
+    background: #ffffff;
+    width: 260px;
+    border-radius: 22px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.07);
+}
+
+/* efeito quando passa o mouse na caixa */
+.produto:hover{
+    transform: translateY(-8px);
+    box-shadow: 0px 20px 45px rgba(0,0,0,0.15);
+}
+
+/* ===== FOTO DO PRODUTO (EFEITO 3D) ===== */
+
+.produto img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.produto:hover img{
+    transform: scale(1.07) translateY(-5px);
+    box-shadow: 0px 18px 40px rgba(0,0,0,0.18);
+}
+
+/* ===== NOME DO PRODUTO (PROFISSIONAL HARD) ===== */
+
+.produto h3{
+    font-size: 18px;
+    color: #222;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    position: relative;
+    transition: 0.35s ease;
+}
+
+/* linha rosa elegante */
+.produto h3::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 0%;
+    height: 3px;
+    background: #e02580;
+    border-radius: 10px;
+    transition: 0.35s ease;
+    transform: translateX(-50%);
+}
+
+/* animação quando passa o mouse */
+.produto:hover h3{
+    color: #e02580;
+    transform: translateY(-3px);
+}
+
+.produto:hover h3::after{
+    width: 60%;
+}
+
+.banner{
+    position: relative;
+    height: 520px;
+    background: url("banner.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 220px;
+    color: white;
+}
+
+/* camada escura profissional */
+.banner::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+}
+/* ===== CAIXA DO PRODUTO (VERSÃO PROFISSIONAL) ===== */
+
+.produto{
+    background: #ffffff;
+    width: 260px;
+    border-radius: 22px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    transition: 0.35s ease;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+}
+
+/* efeito quando passa o mouse */
+.produto:hover{
+    transform: translateY(-8px);
+    box-shadow: 0px 25px 60px rgba(0,0,0,0.18);
+}
+
+/* imagem do produto */
+.produto img{
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 10px;
+    transition: 0.35s ease;
+}
+
+/* efeito na imagem */
+.produto:hover img{
+    transform: scale(1.04);
+}
+
+/* nome do produto */
+.produto h3{
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0 5px 0;
+    font-weight: 600;
+}
+
+/* preço */
+.produto p{
+    font-size: 16px;
+    color: #111;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* ===== AJUSTE PERFEITO PARA CELULAR ===== */
+
+@media (max-width: 600px){
+
+.banner{
+    height: 420px;
+    padding: 20px;
+    text-align: left;
+}
+
+.banner h1{
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.banner p{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+/* produtos centralizados */
+.produtos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+/* caixa maior e centralizada no celular */
+.produto{
+    width: 90%;
+    max-width: 300px;
+}
+
+}
+/* ===== PREÇO PROFISSIONAL AJUSTADO ===== */
+
+.produto p{
+    margin-top: 10px;
+    font-size: 22px;          /* diminui o tamanho do preço */
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 0.5px;
+    transition: 0.35s ease;
+    text-shadow: 0px 2px 6px rgba(0,0,0,0.12);
+}
+
+/* R$ bem menor (agora fica proporcional) */
+.produto p span{
+    font-size: 12px;          /* menor ainda */
+    font-weight: 500;
+    color: #555;
+    margin-right: 4px;
+    position: relative;
+    top: -3px;                /* sobe levemente pra ficar profissional */
+}
+
+/* efeito quando passa o mouse */
+.produto:hover p{
+    transform: translateY(-3px);
+    text-shadow: 0px 6px 16px rgba(0,0,0,0.20);
+}
+
+.botao{
+    position: relative;
+    background: linear-gradient(45deg, #ff4da6, #ff1a75);
+    color: white;
+    padding: 15px 32px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.botao:hover{
+    transform: scale(1.07);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.4);
+}
+
+.botao:hover {
+    transform: scale(1.07);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+}
+* ===== HEADER PROFISSIONAL ===== */
+
+.topo{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:#000;
+box-shadow:0px 5px 20px rgba(0,0,0,0.5);
+    
+body{
+margin:0;
+padding-top:180px;
+}
+
+
+/* LOGO */
+.logo{
+    width:95px;
+    transition:0.3s;
+}
+
+.logo:hover{
+    transform:scale(1.05);
+}
+
+/* MENU */
+.menu{
+    display:flex;
+    gap:35px;
+}
+
+/* LINKS */
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    font-size:16px;
+    letter-spacing:0.5px;
+    position:relative;
+    transition:0.3s;
+}
+
+/* LINHA ANIMADA EMBAIXO */
+.menu a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:2px;
+    background:#ff2f92;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#ff2f92;
+}
+
+.menu a:hover::after{
+    width:100%;
+}
+
+/* MENU FIXO */
+.topo{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:#000;
+padding:18px 80px;
+box-sizing:border-box;
+}
+
+/* espaço exato do menu */
+body{
+margin:0;
+padding-top:120px;
+}
+
+/* ===== AJUSTE PARA CELULAR ===== */
+
+@media (max-width: 600px){
+
+.banner h1{
+    font-size: 28px;
+}
+
+.subtitulo{
+    font-size: 14px;
+}
+
+.botao{
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.menu{
+    display: none;
+}
+
+</style>
+
+<header class="topo">
+
+<div class="logo-area">
+    <img src="logo.png" class="logo">
+</div>
+
+<nav class="menu">
+    <a href="#">Coleção Premium</a>
+    <a href="#">Produtos</a>
+    <a href="#">Promoções</a>
+    <a href="#">Comprar</a>
+
+    
+</nav>
+
+
+</header>
+
+<section class="banner">
+    <h1>Elegância que você veste.</h1>
+
+    <p class="subtitulo">Lingerie que valoriza você.</p>
+    <a href="#" class="botao">Ver Coleção</a>
+</section>
+
+<p class="frase">Elegância • Sensualidade • Sofisticação</p>
+<div class="produtos">
+
+<div class="carrossel">
+
+    <div class="produto">
+        <img src="lingerie1.jpg">
+        <h3>Conjunto Lingerie Rosa</h3>
+        <p><span class="rs">R$</span>89,90</p>
+       <a href="https://wa.me/5511982311608?text=Olá!%20Tenho%20interesse%20no%20Baby%20Doll%20Luxo.%20Ainda%20está%20disponível?" class="botao">
+    Comprar
+</a>
+    </div>
+
+    <div class="produto">
+        <img src="lingerie1.jpg">
+        <h3>Body Rendado Preto</h3>
+        <p><span class="rs">R$</span>89,90</p>
+       <a href="https://wa.me/5511982311608?text=Olá!%20Tenho%20interesse%20no%20Baby%20Doll%20Luxo.%20Ainda%20está%20disponível?" class="botao">
+    Comprar
+</a>
+    </div>
+
+    <div class="produto">
+        <img src="lingerie1.jpg">
+        <h3>Baby Doll Luxo</h3>
+        <p><span class="rs">R$</span>89,90</p>
+     <a href="https://wa.me/5511982311608?text=Olá!%20Tenho%20interesse%20no%20Baby%20Doll%20Luxo.%20Ainda%20está%20disponível?" class="botao">
+    Comprar
+</a>
+    </div>
+
+    <div class="produto">
+        <img src="lingerie1.jpg">
+        <h3>Conjunto Sensual Premium</h3>
+        <p><span class="rs">R$</span>89,90</p>
+     <a href="https://wa.me/5511982311608?text=Olá!%20Tenho%20interesse%20no%20Baby%20Doll%20Luxo.%20Ainda%20está%20disponível?" class="botao">
+    Comprar
+</a>
+    </div>
+
+    <div class="produto">
+        <img src="lingerie1.jpg">
+        <h3>Lingerie Luxo Rosa</h3>
+        <p><span class="rs">R$</span>89,90</p>
+     <a href="https://wa.me/5511982311608?text=Olá!%20Tenho%20interesse%20no%20Baby%20Doll%20Luxo.%20Ainda%20está%20disponível?" class="botao">
+    Comprar
+</a>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
