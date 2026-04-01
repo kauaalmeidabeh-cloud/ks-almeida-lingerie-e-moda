@@ -17,7 +17,24 @@
     text-align: center;       /* garante que o texto fique centralizado */
     padding: 0 20px;          /* deixa uma margem mínima nas laterais */
 }
+.banner .conteudo {
+  position: relative;
+  z-index: 1;
 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-left: clamp(40px, 10vw, 140px);
+  padding-right: 20px;
+
+  color: #fff;
+  max-width: 800px;
+}
+.banner .subtitulo {
+  align-self: flex-start;
+  text-align: left;
+}
 .bandeira .frase {
   font-size: clamp(22px, 3vw, 32px); /* responsivo e elegante */
   font-weight: 600;
