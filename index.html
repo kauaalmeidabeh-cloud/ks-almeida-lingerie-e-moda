@@ -5,10 +5,24 @@
 <title>KS Lingerie e Moda</title>
 
 <style>
-    .banner h1{
-    font-size: 48px;
-    font-weight: 600;
-    margin-bottom: 10px;
+    .banner {
+    position: relative;
+    height: 520px;
+    background: url("banner.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* centraliza verticalmente */
+    align-items: center;      /* centraliza horizontalmente */
+    color: white;
+    text-align: center;       /* garante que o texto fique centralizado */
+    padding: 0 20px;          /* deixa uma margem mínima nas laterais */
+}
+
+.banner .frase {
+    font-size: 24px;          /* tamanho para celular, ajustável */
+    font-weight: 500;         /* aparência profissional */
+    line-height: 1.3;         /* espaçamento entre linhas */
+    max-width: 90%;           /* evita que o texto quebre fora da tela */
 }
 .subtitulo{
     font-size: 22px;
