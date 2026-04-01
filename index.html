@@ -47,13 +47,14 @@
 }
 
 /* SUBTÍTULO */
-.banner .subtitulo {
-  font-size: clamp(16px, 2vw, 20px);
-  font-weight: 400;
-  opacity: 0.9;
-
-  text-align: left;
-  max-width: 500px;
+..banner .overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(
+to right,
+rgba(0,0,0,0.75),
+rgba(0,0,0,0.2)
+);
 }
 
 /* FRASE DE DESTAQUE */
