@@ -3,119 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elegance Lingerie</title>
+<title>KS Lingerie</title>
 
 <style>
-body {
-  margin: 0;
+body{
+  margin:0;
   font-family: Arial, sans-serif;
-  background: #000;
-  color: #fff;
+  background:#000;
+  color:#fff;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  z-index:1000;
+}
+
+.logo{
+  font-size:18px;
+  font-weight:bold;
+}
+
+.menu a{
+  color:#fff;
+  margin-left:20px;
+  text-decoration:none;
 }
 
 /* ===== BANNER ===== */
-.banner {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-  url('https://images.unsplash.com/photo-1581044777550-4cfa60707c03');
-  background-size: cover;
-  background-position: center;
-  height: 90vh;
-  display: flex;
-  align-items: center;
+.banner{
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1581044777550-4cfa60707c03') center/cover no-repeat;
+  display:flex;
+  align-items:center;
 }
 
-.texto-banner {
-  padding-left: 30px;
-  max-width: 400px;
+.banner::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
 }
 
-.texto-banner h1 {
-  font-size: 38px;
-  margin-bottom: 10px;
+.conteudo{
+  position:relative;
+  padding-left:60px;
+  max-width:400px;
 }
 
-.texto-banner p {
-  font-size: 18px;
-  margin-bottom: 20px;
+/* TEXTO AJUSTADO (nem pequeno nem grande) */
+.conteudo h1{
+  font-size:34px;
+  margin-bottom:10px;
 }
 
-.botao {
-  background: #ff4d88;
-  color: #fff;
-  padding: 12px 20px;
-  text-decoration: none;
-  border-radius: 8px;
+.conteudo p{
+  font-size:18px;
+  margin-bottom:20px;
+}
+
+/* BOTÃO AJUSTADO */
+.botao{
+  background:#ff2e7a;
+  padding:12px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  color:#fff;
+  font-size:15px;
+  display:inline-block;
 }
 
 /* ===== PRODUTOS ===== */
-.produtos {
-  padding: 20px;
+.produtos{
+  padding:40px 20px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
 }
 
-.produto {
-  background: #111;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
+.produto{
+  background:#111;
+  padding:10px;
+  border-radius:10px;
+  text-align:center;
 }
 
-.produto img {
-  width: 100%;
-  border-radius: 10px;
+.produto img{
+  width:100%;
+  border-radius:10px;
 }
 
-.produto h3 {
-  margin: 10px 0 5px;
+.produto h3{
+  font-size:16px;
 }
 
-.produto p {
-  color: #ff4d88;
-}
-
-/* ===== WHATSAPP ===== */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: #fff;
-  padding: 15px;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 20px;
+.produto p{
+  color:#ff2e7a;
 }
 
 /* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .texto-banner h1 {
-    font-size: 28px;
+@media(max-width:768px){
+
+  .conteudo{
+    padding-left:25px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
+  .conteudo h1{
+    font-size:26px;
   }
+
+  .conteudo p{
+    font-size:15px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
 }
 </style>
 </head>
 
 <body>
 
-<!-- BANNER -->
+<header>
+  <div class="logo">KS Lingerie</div>
+
+  <div class="menu">
+    <a href="#">Produtos</a>
+    <a href="#">Promoções</a>
+  </div>
+</header>
+
 <section class="banner">
-  <div class="texto-banner">
+  <div class="conteudo">
     <h1>Elegância que você veste</h1>
     <p>Lingerie que valoriza você</p>
     <a href="#" class="botao">Ver Coleção</a>
   </div>
 </section>
 
-<!-- PRODUTOS -->
 <section class="produtos">
   <h2>Mais Vendidos</h2>
 
@@ -129,15 +167,12 @@ body {
 
     <div class="produto">
       <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990">
-      <h3>Renda Premium</h3>
+      <h3>Body Renda</h3>
       <p>R$ 69,90</p>
     </div>
 
   </div>
 </section>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/5511982311608" class="whatsapp">💬</a>
-
 </body>
-</html> 
+</html>
